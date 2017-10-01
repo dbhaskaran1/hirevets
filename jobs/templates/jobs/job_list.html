@@ -5,7 +5,6 @@
 		<div>
 				<h4>Title: {{ job.title }} </h4>
 				<p>Job Summary: {{ job.job_summary }} </p>
-        <a href=#> More details </a>
         <h5><a href="{% url 'job_detail' pk=job.pk %}">{{ job.title }}</a></h5>
 		</div>
   {% endfor %}
