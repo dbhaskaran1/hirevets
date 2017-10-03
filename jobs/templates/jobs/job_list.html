@@ -2,10 +2,44 @@
 
 {% block content %}
   {% for job in jobs %}
-		<div>
-				<h4>Title: {{ job.title }} </h4>
-				<p>Job Summary: {{ job.job_summary }} </p>
-        <h5><a href="{% url 'job_detail' pk=job.pk %}">{{ job.title }}</a></h5>
-		</div>
+				<article class="u-shadow-v11 rounded g-pa-5">
+					<h4 class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover">
+						<a href="{% url 'job_detail' pk=job.pk %}">{{ job.title }}</a>
+					</h4>
+              <ul class="list-unstyled">
+                <li class="media g-mb-10">
+                  <span class="d-block g-color-gray-dark-v5 g-width-110">
+                      <i class="icon-user g-pos-rel g-top-1 g-mr-5"></i> Skills:
+                    </span>
+                  <span class="media-body"> {{ job.experience }} </span>
+                </li>
+
+                <li class="media">
+                  <span class="d-block g-color-gray-dark-v5 g-width-110">
+                      <i class="icon-location-pin g-pos-rel g-top-1 g-mr-5"></i> Location:
+                    </span>
+                  <span class="media-body"> {{ job.location_city }} </span>
+                  <span class="media-body"> {{ job.location_state }} </span>
+                </li>
+              </ul>
+              <hr class="g-brd-gray-light-v4">
+			</article>
   {% endfor %}
+
+	<div class="pagination">
+	    <span class="step-links">
+	        {% if jobs.has_previous %}
+	            <a href="?page={{ jobs.previous_page_number }}">previous</a>
+	        {% endif %}
+
+	        <span class="current">
+	            Page {{ jobs.number }} of {{ jobs.paginator.num_pages }}.
+	        </span>
+
+	        {% if jobs.has_next %}
+	            <a href="?page={{ jobs.next_page_number }}">next</a>
+	        {% endif %}
+	    </span>
+	</div>
+
 {% endblock %}
