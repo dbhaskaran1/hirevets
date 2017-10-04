@@ -1,9 +1,10 @@
 {% extends 'jobs/base.html' %}
 
 {% block content %}
-	<h2 class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover"> Jobs for your consideration</h2>
+
+	<h2 class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover"> Popular Jobs</h2>
   {% for job in jobs %}
-				<article class="u-shadow-v11 rounded g-pa-5">
+				<article class="rounded g-pa-5">
 					<h4 class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover">
 						<a href="{% url 'job_detail' pk=job.pk %}">{{ job.title }}</a>
 					</h4>
