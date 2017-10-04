@@ -1,18 +1,17 @@
-<html>
-	<head>
-		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+<!DOCTYPE html>
+<html lang="en">
 
-    {% load staticfiles %}
-    <link rel="stylesheet" href="{% static 'css/unify-core.css' %}">
-    <link rel="stylesheet" href="{% static 'css/unify-globals.css' %}">
-	</head>
+{% load static %}
+{% include "jobs/head.html" %}
 
-	<body>
-	<div>
-		<h1 class="h1 g-color-gray-dark-v1 g-font-weight-300"><a href="/">HireVets!</a></h1>
-	</div>
+<body>
+<div class="content container g-py-55">
+		<div class="row">
+		{% include "jobs/header.html" %}
+		</div>
+</div>
 
+<main>
 	<div class="content container">
 		<div class="row">
 			<div class="col-md-8">
@@ -21,6 +20,10 @@
 			</div>
 		</div>
 	</div>
-	</body>
+</main>
 
+{% include "jobs/footer.html" %}
+{% include "jobs/js.html" %}
+
+</body>
 </html>
