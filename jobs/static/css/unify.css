@@ -26,7 +26,9 @@ a:hover {
   color: #66ab27; }
 
 .nav-link {
-  color: #555; }
+  color: #555; 
+  display: inline; 
+}
 
 .nav-link:focus,
 .nav-link:hover {
@@ -15425,7 +15427,7 @@ video {
   right: 100%; }
 
 .u-navbar--inline-submenu .dropdown-menu > li {
-  display: inline-block; }
+  display: inline; }
 
 .u-navbar--inline-submenu.u-navbar--overflow .dropdown,
 .u-navbar--inline-submenu.u-navbar--overflow .container {
@@ -15463,7 +15465,7 @@ video {
   .u-navbar--inline-submenu--xl .dropdown-menu::before {
     right: 100%; }
   .u-navbar--inline-submenu--xl .dropdown-menu > li {
-    display: inline-block; }
+    display: inline; }
   .u-navbar--inline-submenu--xl.u-navbar--overflow .dropdown,
   .u-navbar--inline-submenu--xl.u-navbar--overflow .container {
     position: static; }
