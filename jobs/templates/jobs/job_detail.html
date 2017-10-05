@@ -3,7 +3,7 @@
 {% block content %}
 
 
-<section class="g-py-100">
+<section class="g-py-30">
       <div class="container">
         <div class="row">
           <!-- Content -->
@@ -21,7 +21,7 @@
                           <i class="icon-location-pin g-pos-rel g-top-1 mr-1"></i> {{ job.location_city }}, {{ job.location_state }}
                         </span>
                       <span class="g-font-size-13 g-color-gray-dark-v4 g-mr-15">
-                          <i class="icon-directions g-pos-rel g-top-1 mr-1"></i> Airbnb Inc.
+                        <i class="icon-directions g-pos-rel g-top-1 mr-1"></i> {{ job.company }}
                         </span>
                     </div>
                   </div>
@@ -210,7 +210,7 @@
                 </div>
                 <div class="media-body">
                   <span class="d-block">
-                      <a class="u-link-v5 g-font-size-18 g-color-gray-dark-v1 g-color-primary--hover" href="">Airbnb Inc.</a>
+                    <a class="u-link-v5 g-font-size-18 g-color-gray-dark-v1 g-color-primary--hover" href=""> {{ job.company }}.</a>
                     </span>
                   <span class="js-rating d-inline-block small g-color-primary g-mr-15" data-rating="4.5"><div class="g-rating" style="display: inline-block; position: relative; z-index: 1; white-space: nowrap; margin-left: -2px; margin-right: -2px;"><div class="g-rating-forward" style="position: absolute; left: 0px; top: 0px; height: 100%; overflow: hidden; width: 90%;"><i class="fa fa-star" style="margin-left: 2px; margin-right: 2px;"></i><i class="fa fa-star" style="margin-left: 2px; margin-right: 2px;"></i><i class="fa fa-star" style="margin-left: 2px; margin-right: 2px;"></i><i class="fa fa-star" style="margin-left: 2px; margin-right: 2px;"></i><i class="fa fa-star" style="margin-left: 2px; margin-right: 2px;"></i></div><div class="g-rating-backward" style="position: relative; z-index: 1;"><i class="fa fa-star-o" style="margin-left: 2px; margin-right: 2px;"></i><i class="fa fa-star-o" style="margin-left: 2px; margin-right: 2px;"></i><i class="fa fa-star-o" style="margin-left: 2px; margin-right: 2px;"></i><i class="fa fa-star-o" style="margin-left: 2px; margin-right: 2px;"></i><i class="fa fa-star-o" style="margin-left: 2px; margin-right: 2px;"></i></div></div></span>
                   <span class="g-color-gray-dark-v5">4713 Reviews</span>
@@ -340,19 +340,3 @@
       </div>
     </section>
 {% endblock %}
-
-	<div class="content container g-py-10">
-		<div class="row">
-			<div class="col-md-10">
-        <div class="job">
-          <h1> {{ job.title }} </h1>
-          <p> {{ job.job_summary }} </p>
-          <p> {{ job.location_city }} </p>
-          <p> {{ job.location_state }} </p>
-          <p> {{ job.experience }} </p>
-          <p> {{ job.benefits }} </p>
-          <p> {{ job.company }} </p>
-        </div>
-      </div>
-    </div>
-  </div>
